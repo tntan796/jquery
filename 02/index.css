@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background: rgb(197, 192, 192) !important;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+}
+
+.block {
+    width: 300px;
+}
+
+.block__title {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px
+}
+
+.block__content {
+    background:rgb(255, 255, 255);
+    overflow: hidden;
+    background-size: cover;
+    padding: 10px;
+}
+
+.block__title:hover {
+    cursor: pointer;
+    background: goldenrod;
+}
+
+.block__title.active {
+    background: goldenrod;
+}
