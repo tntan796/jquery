@@ -10,10 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    menuItem.forEach(item => {
+    menuItem.forEach((item, index) => {
         item.addEventListener('click', function() {
             $('.topnav a').removeClass('active');
             this.classList.add('active');
-        })
+
+            // Scroll content corresponding with menu select
+            const offsetTop = document.querySelector('.content .subcontent:nth-child(' + (index + 1) + ')');
+            $('html,body').animate({scrollTop: offsetTop.offsetTop + ''}, 1000);
+        });
     })
 })

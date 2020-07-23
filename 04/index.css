@@ -3,9 +3,16 @@
   margin: 0;
 }
 
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .topnav {
   overflow: hidden;
-  background: dodgerblue
+  background: dodgerblue;
+  position: fixed;
+  width: 100%;
 }
 
 .topnav a {
@@ -30,6 +37,10 @@
 
 .topnav .icon {
   display: none;
+}
+
+.content{
+  margin-top: 50px;
 }
 
 @media screen and (max-width: 576px) {
