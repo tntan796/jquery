@@ -32,7 +32,8 @@ html, body{
 }
 
 .topnav a.active {
-  background: rgba(0, 100, 201, 0.932)
+  background: rgba(0, 100, 201, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .topnav .icon {
@@ -44,6 +45,11 @@ html, body{
 }
 
 @media screen and (max-width: 576px) {
+  .topnav {
+    position: fixed;
+    backdrop-filter: blur(10px);
+    background-color: rgba(14, 154, 248, 0.5);  
+  }
   .topnav a {
     display: none;
   }
@@ -53,7 +59,7 @@ html, body{
   }
 
   .topnav.responsive {
-    position: relative;
+    position: fixed;
   }
 
   .topnav.responsive a.icon {
