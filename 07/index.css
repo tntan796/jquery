@@ -1,0 +1,97 @@
+.to {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+.image {
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.nenxanh {
+    position: absolute;
+    background: red;
+    height: 300px;
+    width: 400px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.thanh1, .thanh2 {
+    width: 350px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.chuto,
+.chunho {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.chuto {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+}
+
+.chunho {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.to:hover .image {
+    transform: scale(1.2);
+}
+
+.to:hover .nenxanh {
+    opacity: 0.5;
+    visibility: visible;
+}
+
+.to:hover .chuto {
+    visibility: visible;
+    opacity: 1;
+}
+
+.to:hover .chunho {
+    visibility: visible;
+    opacity: 1;
+}
+
+.to:hover .thanh1 {
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(135deg);
+}
+
+.to:hover .thanh2 {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(-135deg);
+}
