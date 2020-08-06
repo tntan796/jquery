@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body, .slides, .slide{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.slideButton ul{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.slideButton ul li {
+    list-style: none;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background: gray;
+    border-radius: 100%;
+    text-indent: 900px;
+    box-shadow: 0 0 3px black;
+    transition: 0.4s;
+    margin:5px;
+}
+
+.slideButton ul li:hover {
+    background: rgb(43, 43, 44);
+    cursor: pointer;
+}
+
+.slideButton ul li:hover.active {
+    background: rgb(43, 43, 44);
+}
+
+.slideButton ul li.active {
+    background: rgb(204, 204, 207);
+}
+
+.slideButton .next {
+    font-size: 50px;
+    position: absolute;
+    top: 40%;
+    color: gray;
+    right: 0;
+    transition: 0.4s;
+}
+
+.slideButton .next:hover{
+    color: rgb(43, 43, 44);
+    cursor: pointer;
+}
+
+.slideButton .previous {
+    font-size: 50px;
+    position: absolute;
+    top: 40%;
+    color: gray;
+    left: 0;
+    transition: 0.4s;
+}
+
+.slideButton .previous:hover{
+    color: rgb(43, 43, 44);
+    cursor: pointer;
+}
+
+.slide-in-right-to-left {
+    animation: in-right-to-left 1s forwards;
+}
+
+.slide-out-right-to-left {
+    animation: out-right-to-left 1s forwards;
+}
+
+@keyframes in-right-to-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0%); }
+}
+
+@keyframes out-right-to-left {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.slide-in-left-to-right {
+    animation: in-left-to-right 1s forwards;
+}
+
+.slide-out-left-to-right {
+    animation: out-left-to-right 1s forwards;
+}
+
+@keyframes in-left-to-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0%); }
+}
+
+@keyframes out-left-to-right {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+}
