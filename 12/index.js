@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     var thoigian = setInterval(() => {
         $('.next').trigger('click');
     }, 3000);

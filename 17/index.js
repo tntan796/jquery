@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  $('.btnShow').click(() => {
-      $('.menu').toggleClass('active');
-  })
     TweenMax.staggerFrom(
         $('.noidung .to'), // phần tử được chọn
         1, // thời gian chuyển động
